@@ -16,7 +16,11 @@ const onGenetrateSubmit = (e) => {
   const size = document.getElementById("size").value;
 
   if (url === "") {
-    alert("please enter a URl");
+    Swal.fire({
+      icon: "error",
+      title: " ... اوبس ",
+      text: " URL الرجاء ادخال عناون ",
+    });
   } else {
     showSpinner();
     setTimeout(() => {
@@ -60,7 +64,7 @@ const creatSavaBtn = (saveUrl) => {
     "bg-red-500 hover:bg-red-700 text-white font-bold py-2 rounded w-1/3 m-auto my-5";
   link.href = saveUrl;
   link.download = "qrcode";
-  link.innerHTML = "Save Image";
+  link.innerHTML = "احفظ الصوره ";
   document.getElementById("generated").appendChild(link);
 };
 hideSpinner();

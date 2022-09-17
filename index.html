@@ -43,6 +43,7 @@
         display: none;
       }
     </style>
+    <link rel="stylesheet" href="style.css" />
     <title>Free Online QR Code Generator</title>
   </head>
   <body>
@@ -58,19 +59,20 @@
       >
         <div class="w-full md:w-2/3 mr-24">
           <h1 class="text-3xl font-bold mb-5 md:text-4xl">QR Code Generator</h1>
-          <p class="mb-4">
-            QR Codes allow smartphone users to access your website simply and
-            quickly.
+          <p class="mb-4 font-bold text-3xl">
+            تسمح الأكواد لمستخدمي الهواتف الذكية بالوصول إلى موقع الويب الخاص بك
+            ببساطة وبسرعة.
           </p>
-          <p>
-            Enter your URL below to generate a QR Code and download the image.
+          <p class="text-2xl">
+            أدخل العنوان الخاص بك في الاسفل لإنشاء رمز الاستجابة السريعة وتنزيل
+            الصورة.
           </p>
 
           <form id="generate-form" class="mt-4">
             <input
               id="url"
               type="url"
-              placeholder="Enter a URL"
+              placeholder="ادخل العناون الخاص بك هنا "
               class="w-full border-2 border-gray-200 rounded p-3 text-grey-dark mr-2 focus:outline-none mb-5"
             />
 
@@ -91,7 +93,7 @@
               class="bg-gray-600 rounded w-full text-white py-3 px-4 mt-5 hover:bg-black"
               type="submit"
             >
-              Generate QR Code
+              الخاص بك <span>QR Code</span> انشئ ال
             </button>
           </form>
         </div>
@@ -132,5 +134,6 @@
       </div>
     </main>
     <script src="js/app.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   </body>
 </html>
