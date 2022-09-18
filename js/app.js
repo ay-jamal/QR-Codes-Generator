@@ -19,7 +19,7 @@ const onGenetrateSubmit = (e) => {
     Swal.fire({
       icon: "error",
       title: " ... اوبس ",
-      text: " URL الرجاء ادخال عناون ",
+      text: " URL الرجاء ادخال عنوان ",
     });
   } else {
     showSpinner();
@@ -82,6 +82,7 @@ en.addEventListener("click", () => {
       document.querySelector(".para2").innerHTML = data.en.secondePara;
       document.querySelector(".input").placeholder = data.en.placeHolder;
       document.querySelector(".aTag").innerHTML = data.en.imgText;
+      // document.getElementById("btn").innerHTML = data.en.buttonText;
     });
 });
 
@@ -97,5 +98,6 @@ ar.addEventListener("click", () => {
       document.querySelector(".para2").innerHTML = data.ar.secondePara;
       document.querySelector(".input").placeholder = data.ar.placeHolder;
       document.querySelector(".aTag").innerHTML = data.ar.imgText;
+      // document.querySelector(".btn").innerHTML = data.en.buttonText;
     });
 });

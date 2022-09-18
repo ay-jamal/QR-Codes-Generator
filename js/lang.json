@@ -4,13 +4,15 @@
     "firstPara": "QR Code allow smartphone users to access your website simply and quickly",
     "secondePara": "Enter you URL below to generate a QR code and download the image ",
     "placeHolder": "Enter a URL",
-    "imgText": "Save image"
+    "imgText": "Save image",
+    "buttonText": "Generate Your QR Code"
   },
   "ar": {
     "heading": "QR Code Generatorv",
     "firstPara": "تسمح الاكواد لمستخدمي الهواتف الذكيه بالوصول الى مواقع الويب الخاصه بك ببساطه وبسرعه ",
     "secondePara": "ادخل العناوان الخاص بك في الاسفل لانشاء رمز الاستجابه السريعه وتنزيل الصوره ",
     "placeHolder": "ادخل العنوان الخاص بك هنا ",
-    "imgText": "احفظ الصوره "
+    "imgText": "احفظ الصوره ",
+    "buttonText": "أنشئ الكود الخاص بك "
   }
 }
