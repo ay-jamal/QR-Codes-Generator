@@ -1,12 +1,12 @@
 const form = document.getElementById("generate-form");
 const qr = document.getElementById("qrcode");
 
-fetch("ar.json")
+fetch("js/ar.json")
   .then((res) => {
-    return JSON.parse(res);
+    return res.json();
   })
   .then((data) => {
-    console.log(data);
+    console.log(data.name);
   });
 
 const onGenetrateSubmit = (e) => {
@@ -61,7 +61,7 @@ const creatSavaBtn = (saveUrl) => {
   const link = document.createElement("a");
   link.id = "save-link";
   link.classList =
-    "bg-red-500 hover:bg-red-700 text-white font-bold py-2 rounded w-1/3 m-auto my-5";
+    " aTag bg-red-500 hover:bg-red-700 text-white font-bold py-2 rounded w-1/3 m-auto my-5";
   link.href = saveUrl;
   link.download = "qrcode";
   link.innerHTML = "احفظ الصوره ";
@@ -69,3 +69,33 @@ const creatSavaBtn = (saveUrl) => {
 };
 hideSpinner();
 form.addEventListener("submit", onGenetrateSubmit);
+
+const en = document.querySelector(".english");
+en.addEventListener("click", () => {
+  fetch("js/lang.json")
+    .then((res) => {
+      return res.json();
+    })
+    .then((data) => {
+      document.querySelector(".header").innerHTML = data.en.heading;
+      document.querySelector(".para").innerHTML = data.en.firstPara;
+      document.querySelector(".para2").innerHTML = data.en.secondePara;
+      document.querySelector(".input").placeholder = data.en.placeHolder;
+      document.querySelector(".aTag").innerHTML = data.en.imgText;
+    });
+});
+
+const ar = document.querySelector(".arabic");
+ar.addEventListener("click", () => {
+  fetch("js/lang.json")
+    .then((res) => {
+      return res.json();
+    })
+    .then((data) => {
+      document.querySelector(".header").innerHTML = data.ar.heading;
+      document.querySelector(".para").innerHTML = data.ar.firstPara;
+      document.querySelector(".para2").innerHTML = data.ar.secondePara;
+      document.querySelector(".input").placeholder = data.ar.placeHolder;
+      document.querySelector(".aTag").innerHTML = data.ar.imgText;
+    });
+});

@@ -47,9 +47,15 @@
     <title>Free Online QR Code Generator</title>
   </head>
   <body>
-    <header class="p-4 mb-10 bg-red-500">
+    <header class="p-4 mb-10 bg-red-500 flex">
       <div class="max-w-5xl m-auto">
-        <div class="text-xl font-bold text-white">QR Code Generator</div>
+        <div class="text-xl font-bold text-white header">QR Code Generator</div>
+      </div>
+      <div>
+        <button class="text-white text-xl font-bold mr-2 english">
+          English
+        </button>
+        <button class="text-white text-xl font-bold arabic">عربي</button>
       </div>
     </header>
     <img src="img/spinner.svg" alt="" />
@@ -59,11 +65,11 @@
       >
         <div class="w-full md:w-2/3 mr-24">
           <h1 class="text-3xl font-bold mb-5 md:text-4xl">QR Code Generator</h1>
-          <p class="mb-4 font-bold text-3xl">
+          <p class="mb-4 font-bold text-3xl para">
             تسمح الأكواد لمستخدمي الهواتف الذكية بالوصول إلى موقع الويب الخاص بك
             ببساطة وبسرعة.
           </p>
-          <p class="text-2xl">
+          <p class="text-2xl para2">
             أدخل العنوان الخاص بك في الاسفل لإنشاء رمز الاستجابة السريعة وتنزيل
             الصورة.
           </p>
@@ -71,9 +77,10 @@
           <form id="generate-form" class="mt-4">
             <input
               id="url"
+              name="lang"
               type="url"
               placeholder="ادخل العناون الخاص بك هنا "
-              class="w-full border-2 border-gray-200 rounded p-3 text-grey-dark mr-2 focus:outline-none mb-5"
+              class="input w-full border-2 border-gray-200 rounded p-3 text-grey-dark mr-2 focus:outline-none mb-5"
             />
 
             <select
